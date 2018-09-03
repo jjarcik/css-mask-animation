@@ -1,0 +1,73 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    background: #ddd;
+}
+
+
+.wall{
+    width:100%;
+
+}
+
+.mask{
+    position: absolute;
+    position: fixed;
+    top:0;
+    left:0;    
+    -webkit-mask-image: url(../img/homeSlideTransition.png);
+    -webkit-mask-size: 3000% 100%;       
+}
+
+.mask1{
+    -webkit-mask-image: url(../img/homeSlideTransition.png);
+}
+
+.mask2{
+    -webkit-mask-image: url(../img/homeSlideTransition2.png);
+
+}
+
+.mask.inmotion{
+    
+    /*
+     -webkit-mask-position:100% 0;
+    */
+    /**/
+    -webkit-animation: mask-playzero 1.4s steps(29) 0s;
+    -webkit-animation-fill-mode: forwards;    
+    /* -webkit-animation-direction: alternate-reverse; */
+    /**/
+}
+
+.control {
+    position: absolute;
+    top:150px;
+    
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.control span{
+    background: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+@-webkit-keyframes mask-playzero{
+    from{
+        -webkit-mask-position:0 0;
+        -ms-mask-position:0 0;
+        -moz-mask-position:0 0;
+        -o-mask-position:0 0;
+        mask-position:0 0}
+    to{
+        -webkit-mask-position:100% 0;
+        -ms-mask-position:100% 0;
+        -moz-mask-position:100% 0;
+        -o-mask-position:100% 0;
+        mask-position:100% 0}
+}
